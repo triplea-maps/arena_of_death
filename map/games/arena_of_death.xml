@@ -1,0 +1,1957 @@
+<?xml version="1.0"?>
+<!DOCTYPE game SYSTEM "game.dtd">
+<game>
+	<info name="Arena of Death" version="0.1"/>
+	<loader javaClass="games.strategy.triplea.TripleA"/>
+	<triplea minimumVersion="2.5.22294"/>
+	<diceSides value="6"/>
+
+<!--
+For Wizard/Druid -1 works   <option name="givesMovement" value="-1:$Heroes$:Elemental"/>
+
+
+======================================= Areana of Death by TheDog (Code) =======================================
+-->
+
+
+<variableList>
+
+<variable name="AllPlayers">
+	<element name="Blue"/>
+	<element name="Darkred"/>
+</variable>
+
+<variable name="AllPlayersLC">
+	<element name="blue"/>
+	<element name="darkred"/>
+</variable>
+
+<variable name="Heroes">		<!-- 18 -->
+	<element name="Archer"/>
+	<element name="Archer-1"/>
+	<element name="Barbarian"/>
+	<element name="Barbarian-1"/>
+	<element name="Barbarian-2"/>
+	<element name="Priest"/>
+	<element name="Priest-1"/>
+	<element name="Rogue"/>
+	<element name="Rogue-1"/>
+	<element name="Rogue-2"/>
+	<element name="Summoner"/>
+	<element name="Summoner-1"/>
+	<element name="Warrior"/>
+	<element name="Warrior-1"/>
+	<element name="Warrior-2"/>
+	<element name="Warrior-3"/>
+	<element name="Wizard"/>
+	<element name="Wizard-1"/>
+</variable>
+
+<variable name="AllStructures">	<!-- 1 -->
+	<element name="Healing-Well"/>
+</variable>
+
+
+<variable name="AllTerr">		<!-- 100 -->
+    <element name="A1"/>
+    <element name="A2"/>
+    <element name="A3"/>
+    <element name="A4"/>
+    <element name="A5"/>
+    <element name="A6"/>
+    <element name="A7"/>
+    <element name="A8"/>
+    <element name="A9"/>
+    <element name="A10"/>
+    <element name="B1"/>
+    <element name="B2"/>
+    <element name="B3"/>
+    <element name="B4"/>
+    <element name="B5"/>
+    <element name="B6"/>
+    <element name="B7"/>
+    <element name="B8"/>
+    <element name="B9"/>
+    <element name="B10"/>
+    <element name="C1"/>
+    <element name="C2"/>
+    <element name="C3"/>
+    <element name="C4"/>
+    <element name="C5"/>
+    <element name="C6"/>
+    <element name="C7"/>
+    <element name="C8"/>
+    <element name="C9"/>
+    <element name="C10"/>
+    <element name="D1"/>
+    <element name="D2"/>
+    <element name="D3"/>
+    <element name="D4"/>
+    <element name="D5"/>
+    <element name="D6"/>
+    <element name="D7"/>
+    <element name="D8"/>
+    <element name="D9"/>
+    <element name="D10"/>
+    <element name="E1"/>
+    <element name="E2"/>
+    <element name="E3"/>
+    <element name="E4"/>
+    <element name="E5"/>
+    <element name="E6"/>
+    <element name="E7"/>
+    <element name="E8"/>
+    <element name="E9"/>
+    <element name="E10"/>
+    <element name="F1"/>
+    <element name="F2"/>
+    <element name="F3"/>
+    <element name="F4"/>
+    <element name="F5"/>
+    <element name="F6"/>
+    <element name="F7"/>
+    <element name="F8"/>
+    <element name="F9"/>
+    <element name="F10"/>
+    <element name="G1"/>
+    <element name="G2"/>
+    <element name="G3"/>
+    <element name="G4"/>
+    <element name="G5"/>
+    <element name="G6"/>
+    <element name="G7"/>
+    <element name="G8"/>
+    <element name="G9"/>
+    <element name="G10"/>
+    <element name="H1"/>
+    <element name="H2"/>
+    <element name="H3"/>
+    <element name="H4"/>
+    <element name="H5"/>
+    <element name="H6"/>
+    <element name="H7"/>
+    <element name="H8"/>
+    <element name="H9"/>
+    <element name="H10"/>
+    <element name="I1"/>
+    <element name="I2"/>
+    <element name="I3"/>
+    <element name="I4"/>
+    <element name="I5"/>
+    <element name="I6"/>
+    <element name="I7"/>
+    <element name="I8"/>
+    <element name="I9"/>
+    <element name="I10"/>
+    <element name="J1"/>
+    <element name="J2"/>
+    <element name="J3"/>
+    <element name="J4"/>
+    <element name="J5"/>
+    <element name="J6"/>
+    <element name="J7"/>
+    <element name="J8"/>
+    <element name="J9"/>
+    <element name="J10"/>
+</variable>
+
+</variableList>
+
+
+<map>
+<!-- 100 Territory Name Definitions -->
+    <territory name="A1"/>
+    <territory name="A2"/>
+    <territory name="A3"/>
+    <territory name="A4"/>
+    <territory name="A5"/>
+    <territory name="A6"/>
+    <territory name="A7"/>
+    <territory name="A8"/>
+    <territory name="A9"/>
+    <territory name="A10"/>
+    <territory name="B1"/>
+    <territory name="B2"/>
+    <territory name="B3"/>
+    <territory name="B4"/>
+    <territory name="B5"/>
+    <territory name="B6"/>
+    <territory name="B7"/>
+    <territory name="B8"/>
+    <territory name="B9"/>
+    <territory name="B10"/>
+    <territory name="C1"/>
+    <territory name="C2"/>
+    <territory name="C3"/>
+    <territory name="C4"/>
+    <territory name="C5"/>
+    <territory name="C6"/>
+    <territory name="C7"/>
+    <territory name="C8"/>
+    <territory name="C9"/>
+    <territory name="C10"/>
+    <territory name="D1"/>
+    <territory name="D2"/>
+    <territory name="D3"/>
+    <territory name="D4"/>
+    <territory name="D5"/>
+    <territory name="D6"/>
+    <territory name="D7"/>
+    <territory name="D8"/>
+    <territory name="D9"/>
+    <territory name="D10"/>
+    <territory name="E1"/>
+    <territory name="E2"/>
+    <territory name="E3"/>
+    <territory name="E4"/>
+    <territory name="E5"/>
+    <territory name="E6"/>
+    <territory name="E7"/>
+    <territory name="E8"/>
+    <territory name="E9"/>
+    <territory name="E10"/>
+    <territory name="F1"/>
+    <territory name="F2"/>
+    <territory name="F3"/>
+    <territory name="F4"/>
+    <territory name="F5"/>
+    <territory name="F6"/>
+    <territory name="F7"/>
+    <territory name="F8"/>
+    <territory name="F9"/>
+    <territory name="F10"/>
+    <territory name="G1"/>
+    <territory name="G2"/>
+    <territory name="G3"/>
+    <territory name="G4"/>
+    <territory name="G5"/>
+    <territory name="G6"/>
+    <territory name="G7"/>
+    <territory name="G8"/>
+    <territory name="G9"/>
+    <territory name="G10"/>
+    <territory name="H1"/>
+    <territory name="H2"/>
+    <territory name="H3"/>
+    <territory name="H4"/>
+    <territory name="H5"/>
+    <territory name="H6"/>
+    <territory name="H7"/>
+    <territory name="H8"/>
+    <territory name="H9"/>
+    <territory name="H10"/>
+    <territory name="I1"/>
+    <territory name="I2"/>
+    <territory name="I3"/>
+    <territory name="I4"/>
+    <territory name="I5"/>
+    <territory name="I6"/>
+    <territory name="I7"/>
+    <territory name="I8"/>
+    <territory name="I9"/>
+    <territory name="I10"/>
+    <territory name="J1"/>
+    <territory name="J2"/>
+    <territory name="J3"/>
+    <territory name="J4"/>
+    <territory name="J5"/>
+    <territory name="J6"/>
+    <territory name="J7"/>
+    <territory name="J8"/>
+    <territory name="J9"/>
+    <territory name="J10"/>
+
+
+<!--  vertical connections -->
+    <connection t1="A1" t2="A2"/>
+    <connection t1="A2" t2="A3"/>
+    <connection t1="A3" t2="A4"/>
+    <connection t1="A4" t2="A5"/>
+    <connection t1="A5" t2="A6"/>
+    <connection t1="A6" t2="A7"/>
+    <connection t1="A7" t2="A8"/>
+    <connection t1="A8" t2="A9"/>
+    <connection t1="A9" t2="A10"/>
+    <connection t1="B1" t2="B2"/>
+    <connection t1="B2" t2="B3"/>
+    <connection t1="B3" t2="B4"/>
+    <connection t1="B4" t2="B5"/>
+    <connection t1="B5" t2="B6"/>
+    <connection t1="B6" t2="B7"/>
+    <connection t1="B7" t2="B8"/>
+    <connection t1="B8" t2="B9"/>
+    <connection t1="B9" t2="B10"/>
+    <connection t1="C1" t2="C2"/>
+    <connection t1="C2" t2="C3"/>
+    <connection t1="C3" t2="C4"/>
+    <connection t1="C4" t2="C5"/>
+    <connection t1="C5" t2="C6"/>
+    <connection t1="C6" t2="C7"/>
+    <connection t1="C7" t2="C8"/>
+    <connection t1="C8" t2="C9"/>
+    <connection t1="C9" t2="C10"/>
+    <connection t1="D1" t2="D2"/>
+    <connection t1="D2" t2="D3"/>
+    <connection t1="D3" t2="D4"/>
+    <connection t1="D4" t2="D5"/>
+    <connection t1="D5" t2="D6"/>
+    <connection t1="D6" t2="D7"/>
+    <connection t1="D7" t2="D8"/>
+    <connection t1="D8" t2="D9"/>
+    <connection t1="D9" t2="D10"/>
+    <connection t1="E1" t2="E2"/>
+    <connection t1="E2" t2="E3"/>
+    <connection t1="E3" t2="E4"/>
+    <connection t1="E4" t2="E5"/>
+    <connection t1="E5" t2="E6"/>
+    <connection t1="E6" t2="E7"/>
+    <connection t1="E7" t2="E8"/>
+    <connection t1="E8" t2="E9"/>
+    <connection t1="E9" t2="E10"/>
+    <connection t1="F1" t2="F2"/>
+    <connection t1="F2" t2="F3"/>
+    <connection t1="F3" t2="F4"/>
+    <connection t1="F4" t2="F5"/>
+    <connection t1="F5" t2="F6"/>
+    <connection t1="F6" t2="F7"/>
+    <connection t1="F7" t2="F8"/>
+    <connection t1="F8" t2="F9"/>
+    <connection t1="F9" t2="F10"/>
+    <connection t1="G1" t2="G2"/>
+    <connection t1="G2" t2="G3"/>
+    <connection t1="G3" t2="G4"/>
+    <connection t1="G4" t2="G5"/>
+    <connection t1="G5" t2="G6"/>
+    <connection t1="G6" t2="G7"/>
+    <connection t1="G7" t2="G8"/>
+    <connection t1="G8" t2="G9"/>
+    <connection t1="G9" t2="G10"/>
+    <connection t1="H1" t2="H2"/>
+    <connection t1="H2" t2="H3"/>
+    <connection t1="H3" t2="H4"/>
+    <connection t1="H4" t2="H5"/>
+    <connection t1="H5" t2="H6"/>
+    <connection t1="H6" t2="H7"/>
+    <connection t1="H7" t2="H8"/>
+    <connection t1="H8" t2="H9"/>
+    <connection t1="H9" t2="H10"/>
+    <connection t1="I1" t2="I2"/>
+    <connection t1="I2" t2="I3"/>
+    <connection t1="I3" t2="I4"/>
+    <connection t1="I4" t2="I5"/>
+    <connection t1="I5" t2="I6"/>
+    <connection t1="I6" t2="I7"/>
+    <connection t1="I7" t2="I8"/>
+    <connection t1="I8" t2="I9"/>
+    <connection t1="I9" t2="I10"/>
+    <connection t1="J1" t2="J2"/>
+    <connection t1="J2" t2="J3"/>
+    <connection t1="J3" t2="J4"/>
+    <connection t1="J4" t2="J5"/>
+    <connection t1="J5" t2="J6"/>
+    <connection t1="J6" t2="J7"/>
+    <connection t1="J7" t2="J8"/>
+    <connection t1="J8" t2="J9"/>
+    <connection t1="J9" t2="J10"/>
+
+
+    <!-- left to right -->
+    <connection t1="A1" t2="B1"/>
+    <connection t1="A2" t2="B2"/>
+    <connection t1="A3" t2="B3"/>
+    <connection t1="A4" t2="B4"/>
+    <connection t1="A5" t2="B5"/>
+    <connection t1="A6" t2="B6"/>
+    <connection t1="A7" t2="B7"/>
+    <connection t1="A8" t2="B8"/>
+    <connection t1="A9" t2="B9"/>
+    <connection t1="A10" t2="B10"/>
+    <connection t1="A1" t2="B2"/>
+    <connection t1="A2" t2="B3"/>
+    <connection t1="A3" t2="B4"/>
+    <connection t1="A4" t2="B5"/>
+    <connection t1="A5" t2="B6"/>
+    <connection t1="A6" t2="B7"/>
+    <connection t1="A7" t2="B8"/>
+    <connection t1="A8" t2="B9"/>
+    <connection t1="A9" t2="B10"/>
+    <connection t1="C1" t2="B1"/>
+    <connection t1="C2" t2="B2"/>
+    <connection t1="C3" t2="B3"/>
+    <connection t1="C4" t2="B4"/>
+    <connection t1="C5" t2="B5"/>
+    <connection t1="C6" t2="B6"/>
+    <connection t1="C7" t2="B7"/>
+    <connection t1="C8" t2="B8"/>
+    <connection t1="C9" t2="B9"/>
+    <connection t1="C10" t2="B10"/>
+    <connection t1="C1" t2="B2"/>
+    <connection t1="C2" t2="B3"/>
+    <connection t1="C3" t2="B4"/>
+    <connection t1="C4" t2="B5"/>
+    <connection t1="C5" t2="B6"/>
+    <connection t1="C6" t2="B7"/>
+    <connection t1="C7" t2="B8"/>
+    <connection t1="C8" t2="B9"/>
+    <connection t1="C9" t2="B10"/>
+    <connection t1="C1" t2="D1"/>
+    <connection t1="C2" t2="D2"/>
+    <connection t1="C3" t2="D3"/>
+    <connection t1="C4" t2="D4"/>
+    <connection t1="C5" t2="D5"/>
+    <connection t1="C6" t2="D6"/>
+    <connection t1="C7" t2="D7"/>
+    <connection t1="C8" t2="D8"/>
+    <connection t1="C9" t2="D9"/>
+    <connection t1="C10" t2="D10"/>
+    <connection t1="C1" t2="D2"/>
+    <connection t1="C2" t2="D3"/>
+    <connection t1="C3" t2="D4"/>
+    <connection t1="C4" t2="D5"/>
+    <connection t1="C5" t2="D6"/>
+    <connection t1="C6" t2="D7"/>
+    <connection t1="C7" t2="D8"/>
+    <connection t1="C8" t2="D9"/>
+    <connection t1="C9" t2="D10"/>
+    <connection t1="E1" t2="F1"/>
+    <connection t1="E2" t2="F2"/>
+    <connection t1="E3" t2="F3"/>
+    <connection t1="E4" t2="F4"/>
+    <connection t1="E5" t2="F5"/>
+    <connection t1="E6" t2="F6"/>
+    <connection t1="E7" t2="F7"/>
+    <connection t1="E8" t2="F8"/>
+    <connection t1="E9" t2="F9"/>
+    <connection t1="E10" t2="F10"/>
+    <connection t1="E1" t2="F2"/>
+    <connection t1="E2" t2="F3"/>
+    <connection t1="E3" t2="F4"/>
+    <connection t1="E4" t2="F5"/>
+    <connection t1="E5" t2="F6"/>
+    <connection t1="E6" t2="F7"/>
+    <connection t1="E7" t2="F8"/>
+    <connection t1="E8" t2="F9"/>
+    <connection t1="E9" t2="F10"/>
+    <connection t1="E1" t2="D1"/>
+    <connection t1="E2" t2="D2"/>
+    <connection t1="E3" t2="D3"/>
+    <connection t1="E4" t2="D4"/>
+    <connection t1="E5" t2="D5"/>
+    <connection t1="E6" t2="D6"/>
+    <connection t1="E7" t2="D7"/>
+    <connection t1="E8" t2="D8"/>
+    <connection t1="E9" t2="D9"/>
+    <connection t1="E10" t2="D10"/>
+    <connection t1="E1" t2="D2"/>
+    <connection t1="E2" t2="D3"/>
+    <connection t1="E3" t2="D4"/>
+    <connection t1="E4" t2="D5"/>
+    <connection t1="E5" t2="D6"/>
+    <connection t1="E6" t2="D7"/>
+    <connection t1="E7" t2="D8"/>
+    <connection t1="E8" t2="D9"/>
+    <connection t1="E9" t2="D10"/>
+    <connection t1="G1" t2="F1"/>
+    <connection t1="G2" t2="F2"/>
+    <connection t1="G3" t2="F3"/>
+    <connection t1="G4" t2="F4"/>
+    <connection t1="G5" t2="F5"/>
+    <connection t1="G6" t2="F6"/>
+    <connection t1="G7" t2="F7"/>
+    <connection t1="G8" t2="F8"/>
+    <connection t1="G9" t2="F9"/>
+    <connection t1="G10" t2="F10"/>
+    <connection t1="G1" t2="F2"/>
+    <connection t1="G2" t2="F3"/>
+    <connection t1="G3" t2="F4"/>
+    <connection t1="G4" t2="F5"/>
+    <connection t1="G5" t2="F6"/>
+    <connection t1="G6" t2="F7"/>
+    <connection t1="G7" t2="F8"/>
+    <connection t1="G8" t2="F9"/>
+    <connection t1="G9" t2="F10"/>
+    <connection t1="G1" t2="H1"/>
+    <connection t1="G2" t2="H2"/>
+    <connection t1="G3" t2="H3"/>
+    <connection t1="G4" t2="H4"/>
+    <connection t1="G5" t2="H5"/>
+    <connection t1="G6" t2="H6"/>
+    <connection t1="G7" t2="H7"/>
+    <connection t1="G8" t2="H8"/>
+    <connection t1="G9" t2="H9"/>
+    <connection t1="G10" t2="H10"/>
+    <connection t1="G1" t2="H2"/>
+    <connection t1="G2" t2="H3"/>
+    <connection t1="G3" t2="H4"/>
+    <connection t1="G4" t2="H5"/>
+    <connection t1="G5" t2="H6"/>
+    <connection t1="G6" t2="H7"/>
+    <connection t1="G7" t2="H8"/>
+    <connection t1="G8" t2="H9"/>
+    <connection t1="G9" t2="H10"/>
+    <connection t1="I1" t2="J1"/>
+    <connection t1="I2" t2="J2"/>
+    <connection t1="I3" t2="J3"/>
+    <connection t1="I4" t2="J4"/>
+    <connection t1="I5" t2="J5"/>
+    <connection t1="I6" t2="J6"/>
+    <connection t1="I7" t2="J7"/>
+    <connection t1="I8" t2="J8"/>
+    <connection t1="I9" t2="J9"/>
+    <connection t1="I10" t2="J10"/>
+    <connection t1="I1" t2="J2"/>
+    <connection t1="I2" t2="J3"/>
+    <connection t1="I3" t2="J4"/>
+    <connection t1="I4" t2="J5"/>
+    <connection t1="I5" t2="J6"/>
+    <connection t1="I6" t2="J7"/>
+    <connection t1="I7" t2="J8"/>
+    <connection t1="I8" t2="J9"/>
+    <connection t1="I9" t2="J10"/>
+    <connection t1="I1" t2="H1"/>
+    <connection t1="I2" t2="H2"/>
+    <connection t1="I3" t2="H3"/>
+    <connection t1="I4" t2="H4"/>
+    <connection t1="I5" t2="H5"/>
+    <connection t1="I6" t2="H6"/>
+    <connection t1="I7" t2="H7"/>
+    <connection t1="I8" t2="H8"/>
+    <connection t1="I9" t2="H9"/>
+    <connection t1="I10" t2="H10"/>
+    <connection t1="I1" t2="H2"/>
+    <connection t1="I2" t2="H3"/>
+    <connection t1="I3" t2="H4"/>
+    <connection t1="I4" t2="H5"/>
+    <connection t1="I5" t2="H6"/>
+    <connection t1="I6" t2="H7"/>
+    <connection t1="I7" t2="H8"/>
+    <connection t1="I8" t2="H9"/>
+    <connection t1="I9" t2="H10"/>
+
+</map>
+
+  <resourceList>
+    <resource name="PUs"/>
+    <resource name="PriestMana"/>	
+    <resource name="SummonerMana"/>
+    <resource name="WizardMana"/>
+  </resourceList>
+
+  <playerList>
+    <!-- Player Turn Order -->
+	<player name="Blue" 	optional="true" canBeDisabled="true" defaultType="Human" isHidden="false"/>
+	<player name="Darkred" 	optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
+
+
+    <!-- Alliance -->
+    <alliance player="Blue" alliance="Blue"/>
+    <alliance player="Darkred" alliance="Darkred"/>
+  </playerList>
+
+  <!-- ============================================= UNIT LIST =============================================  -->	
+  <unitList>
+<!-- UNIT LIST -->
+	<unit name="Archer"/>
+	<unit name="Archer-1"/>
+	<unit name="Archer-Shot"/>
+	<unit name="Archer-Shot-1"/>
+	<unit name="Barbarian"/>
+	<unit name="Barbarian-1"/>
+	<unit name="Barbarian-2"/>
+	<unit name="Priest"/>
+	<unit name="Priest-1"/>
+	<unit name="Rogue"/>
+	<unit name="Rogue-1"/>
+	<unit name="Rogue-2"/>
+	<unit name="Summoner"/>
+	<unit name="Summoner-1"/>
+	<unit name="Warrior"/>
+	<unit name="Warrior-1"/>
+	<unit name="Warrior-2"/>
+	<unit name="Warrior-3"/>
+	<unit name="Wizard"/>
+	<unit name="Wizard-1"/>
+
+	<unit name="Elemental"/>
+
+	<unit name="Healing-Well"/>
+	<unit name="na-1"/>	
+	<unit name="na-2"/>
+	<unit name="spawn-point"/>
+
+
+
+  </unitList>
+
+
+
+
+<!-- ============================================= GO ALLIANCE =============================================  -->	
+
+<relationshipTypes>
+    <relationshipType name="Allied"/>
+    <relationshipType name="War"/>
+    <relationshipType name="Neutral"/>
+</relationshipTypes>
+
+<!-- =================================================== GAMEPLAY =================================================== -->
+<gamePlay>
+    <delegate name="initDelegate" javaClass="games.strategy.triplea.delegate.InitializationDelegate" display="Initializing Delegates"/>
+<!--
+	<delegate name="randomStartDelegate" javaClass="games.strategy.triplea.delegate.RandomStartDelegate" display="Pregame Nation Placements"/>
+    <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>
+    <delegate name="placeBid" javaClass="games.strategy.triplea.delegate.BidPlaceDelegate" display="Bid Placement"/>
+    <delegate name="userActions" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
+    <delegate name="tech" javaClass="games.strategy.triplea.delegate.TechnologyDelegate" display="Research Technology"/>
+    <delegate name="tech_activation" javaClass="games.strategy.triplea.delegate.TechActivationDelegate" display="Technical advancements"/>
+	<delegate name="politics" javaClass="games.strategy.triplea.delegate.PoliticsDelegate" display="Politics"/>
+-->
+    <delegate name="move" javaClass="games.strategy.triplea.delegate.MoveDelegate" display="Combat Move"/>
+    <delegate name="battle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Combat"/>
+    <delegate name="purchase" javaClass="games.strategy.triplea.delegate.PurchaseDelegate" display="Purchase Units"/>
+    <delegate name="placeNoAirCheck" javaClass="games.strategy.triplea.delegate.NoAirCheckPlaceDelegate" display="Place Units"/>
+    <delegate name="place" javaClass="games.strategy.triplea.delegate.PlaceDelegate" display="Place Units"/>
+    <delegate name="endTurn" javaClass="games.strategy.triplea.delegate.EndTurnDelegate" display="Turn Complete"/>
+    <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
+
+
+<sequence>
+    <step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
+
+<!-- see heldUnits to place units -->
+<!-- see Territories Are Assigned Randomly -->
+<!--			<step name="setupRandomStartDelegate" delegate="randomStartDelegate" display="Pregame Nation Placements" maxRunCount="1"/>
+-->
+  <!-- Bidding Phase -->
+
+<!-- note the lack of / when a /step is used -->					
+	<!-- o -->		
+	<step name="blueCombatMove" delegate="move" player="Blue" display="Combat Move"/>
+	<step name="blueBattle" delegate="battle" player="Blue" display="Combat"/>
+	<step name="blueNonCombatMove" delegate="move" player="Blue" display="Non Combat Move">
+        <stepProperty name="removeAirThatCanNotLand" value="false"/>
+	</step>
+
+	<step name="bluePurchase" delegate="purchase" player="Blue" display="Purchase Units"/>
+	<step name="bluePlace" delegate="place" player="Blue" display="Place Units">
+        <stepProperty name="removeAirThatCanNotLand" value="false"/>
+	</step>
+	<step name="blueEndTurn" delegate="endTurn" player="Blue" display="Turn Complete"/>
+
+
+	<!-- o -->
+	<step name="darkredCombatMove" delegate="move" player="Darkred" display="Combat Move"/>
+	<step name="darkredBattle" delegate="battle" player="Darkred" display="Combat"/>
+	<step name="darkredNonCombatMove" delegate="move" player="Darkred" display="Non Combat Move">
+		<stepProperty name="removeAirThatCanNotLand" value="false"/>
+	</step>
+
+	<step name="darkredPurchase" delegate="purchase" player="Darkred" display="Purchase Units"/>
+	<step name="darkredPlace" delegate="place" player="Darkred" display="Place Units">
+        <stepProperty name="removeAirThatCanNotLand" value="false"/>
+	</step>
+	<step name="darkredEndTurn" delegate="endTurn" player="Darkred" display="Turn Complete"/>
+
+    <step name="endRoundStep" delegate="endRound" display="Round Complete"/>
+</sequence>
+	<offset round="0"/>
+</gamePlay>
+
+
+
+<!-- ============================================= GO UNIT STATS =============================================  -->
+<production>
+<!-- Unit Production Cost -->
+    <productionRule name="buyArcher">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Archer" quantity="1"/>
+    </productionRule>
+
+    <productionRule name="buyBarbarian">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Barbarian" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyWarrior">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Warrior" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyPriest">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Priest" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyRogue">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Rogue" quantity="1"/>
+    </productionRule>
+    <productionRule name="buySummoner">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Summoner" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyWizard">
+      <cost resource="PUs" quantity="20"/>
+      <result resourceOrUnit="Wizard" quantity="1"/>
+    </productionRule>
+
+   <productionRule name="buyElemental">
+      <cost resource="PUs" quantity="1"/>
+      <cost resource="SummonerMana" quantity="2"/>
+      <result resourceOrUnit="Elemental" quantity="1"/>
+    </productionRule>
+
+    <productionRule name="buyspawn-point">
+      <cost resource="PUs" quantity="0"/>
+      <result resourceOrUnit="spawn-point" quantity="1"/>
+    </productionRule>
+
+     <productionRule name="buyna-1">
+      <cost resource="PUs" quantity="999"/>
+      <result resourceOrUnit="na-1" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyna-2">
+      <cost resource="PUs" quantity="999"/>
+      <result resourceOrUnit="na-2" quantity="1"/>
+    </productionRule>
+
+
+
+<!-- ============================================= GO UNIT STATS =============================================  -->
+    <productionFrontier name="PlayerFrontier">
+		<frontierRules name="buyArcher"/>
+		<frontierRules name="buyBarbarian"/>
+		<frontierRules name="buyWarrior"/>
+		<frontierRules name="buyPriest"/>
+		<frontierRules name="buyRogue"/>
+		<frontierRules name="buySummoner"/>
+		<frontierRules name="buyWizard"/>
+		<frontierRules name="buyElemental"/>
+    </productionFrontier>
+
+
+    <playerProduction player="Blue" 	frontier="PlayerFrontier"/>
+    <playerProduction player="Darkred" 	frontier="PlayerFrontier"/>
+
+
+</production>
+
+
+<!-- ======================================= TECHNOLOGY =======================================  -->	
+<!-- below removes the Tech grid on the Players tab	& no tech properties defined -->
+	<technology>
+	</technology>
+
+
+
+<attachmentList>
+
+
+<!-- ======================================= GO Stack Placement ======================================= -->
+    <attachment name="rulesAttachment" attachTo="Blue" javaClass="RulesAttachment" type="player">
+        <option name="placementAnyTerritory" value="true"/>
+        <option name="placementPerTerritory" value="2"/>
+        <option name="maxPlacePerTerritory" value="1"/>
+    </attachment>
+
+    <attachment name="rulesAttachment" attachTo="Darkred" javaClass="RulesAttachment" type="player">
+        <option name="placementAnyTerritory" value="true"/>
+        <option name="placementPerTerritory" value="2"/>
+        <option name="maxPlacePerTerritory" value="1"/>
+    </attachment>
+
+
+<!-- ======================================= GO TERRITORY =======================================  -->
+<!-- Territory Attachments -->
+    <attachment name="territoryAttachment" attachTo="A1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>	  
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="A10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="1"/>
+		<option name="capital" value="Blue"/>
+		<option name="victoryCity" value="1"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="B10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="1"/>
+		<option name="victoryCity" value="1"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="C10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="D10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="1"/>
+		<option name="victoryCity" value="1"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="E10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="F10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="G10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="H10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="1"/>
+		<option name="capital" value="Darkred"/>
+		<option name="victoryCity" value="1"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="1"/>
+		<option name="victoryCity" value="1"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="I10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J1" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J2" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J3" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J4" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J5" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J6" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J7" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J8" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J9" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+    <attachment name="territoryAttachment" attachTo="J10" javaClass="TerritoryAttachment" type="territory">
+		<option name="production" value="0"/>
+    </attachment>
+
+<!-- ======================================= GO TERRITORY EFFECTS =======================================  -->	
+
+
+
+<!-- ============================================= GO UNIT STATS =============================================  -->
+<!-- Archer -->
+    <attachment name="unitAttachment" attachTo="Archer" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="1"/>
+        <option name="defense" value="2"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Archer-1"/>
+        <option name="movement" value="2"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="createsUnitsList" value="1:Archer-Shot"/>
+		<option name="requiresUnits" value="spawn-point"/>
+    </attachment>
+    <attachment name="unitAttachment" attachTo="Archer-Shot" javaClass="UnitAttachment" type="unitType">
+		<option name="attack" value="1"/>
+		<option name="movement" value="9"/>
+		<option name="isAir" value="true"/>
+			<option name="isKamikaze" value="true"/>		
+			<option name="isSuicideOnAttack" value="true"/>
+			<option name="isSuicideOnDefense" value="true"/>
+		<option name="requiresUnits" value="Archer"/>
+		<option name="destroyedWhenCapturedBy" value="$AllPlayers$"/>
+    </attachment>
+
+<!-- Archer wounded -->
+    <attachment name="unitAttachment" attachTo="Archer-1" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="0"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="createsUnitsList" value="1:Archer-Shot-1"/>
+    </attachment>
+    <attachment name="unitAttachment" attachTo="Archer-Shot-1" javaClass="UnitAttachment" type="unitType">
+		<option name="isInfrastructure" value="true"/>
+		<option name="movement" value="5"/>
+		<option name="isAir" value="true"/>
+			<option name="isKamikaze" value="true"/>		
+			<option name="isSuicideOnAttack" value="true"/>
+			<option name="isSuicideOnDefense" value="true"/>
+		<option name="requiresUnits" value="Archer-1"/>
+		<option name="destroyedWhenCapturedBy" value="$AllPlayers$"/>
+    </attachment>
+
+
+
+<!-- Barbarian -->
+    <attachment name="unitAttachment" attachTo="Barbarian" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="3"/>
+			<option name="attackRolls" value="2"/>
+        <option name="defense" value="3"/>
+<!--			<option name="defenseRolls" value="2"/> -->
+		<option name="hitPoints" value="3"/>
+			<option name="whenHitPointsDamagedChangesInto" value="2:false:Barbarian-1"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Barbarian-2"/>
+        <option name="movement" value="3"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="requiresUnits" value="spawn-point"/>
+   </attachment>
+<!-- Barbarian-wounded -->
+    <attachment name="unitAttachment" attachTo="Barbarian-2" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="2"/>
+			<option name="attackRolls" value="2"/>
+        <option name="defense" value="2"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Barbarian-1"/>
+        <option name="movement" value="2"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+    <attachment name="unitAttachment" attachTo="Barbarian-1" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="1"/>
+			<option name="attackRolls" value="2"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+
+
+
+<!-- Priest -->
+    <attachment name="unitAttachment" attachTo="Priest" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="1"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Priest-1"/>
+        <option name="movement" value="2"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="createsResourcesList" value="1:PriestMana"/>
+		<option name="requiresUnits" value="spawn-point"/>
+    </attachment>
+    <attachment name="unitAttachment" attachTo="Priest-1" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="0"/>
+        <option name="defense" value="0"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+
+
+
+<!-- Rogue -->
+    <attachment name="unitAttachment" attachTo="Rogue" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="isFirstStrike" value="true"/>
+		<option name="attack" value="3"/>
+        <option name="defense" value="3"/>
+		<option name="hitPoints" value="3"/>
+			<option name="whenHitPointsDamagedChangesInto" value="2:false:Rogue-1"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Rogue-2"/>
+        <option name="movement" value="3"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="requiresUnits" value="spawn-point"/>
+    </attachment>
+<!-- Rogue wounded -->
+    <attachment name="unitAttachment" attachTo="Rogue-2" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="isFirstStrike" value="true"/>
+		<option name="attack" value="2"/>
+        <option name="defense" value="2"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Rogue-1"/>
+        <option name="movement" value="2"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+    <attachment name="unitAttachment" attachTo="Rogue-1" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="isFirstStrike" value="true"/>
+		<option name="attack" value="1"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+
+
+
+<!-- Summoner -->
+    <attachment name="unitAttachment" attachTo="Summoner" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="1"/>
+        <option name="defense" value="2"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Summoner-1"/>
+        <option name="movement" value="2"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="createsResourcesList" value="2:SummonerMana"/>	<!-- magic -->
+		<option name="requiresUnits" value="spawn-point"/>
+    </attachment>
+<!-- Summoner wounded -->
+    <attachment name="unitAttachment" attachTo="Summoner-1" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="0"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="createsResourcesList" value="1:SummonerMana"/>	<!-- reduced magic -->
+    </attachment>
+
+
+
+<!-- Warrior -->
+    <attachment name="unitAttachment" attachTo="Warrior" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="4"/>
+        <option name="defense" value="4"/>
+		<option name="hitPoints" value="4"/>
+			<option name="whenHitPointsDamagedChangesInto" value="3:false:Warrior-1"/>
+			<option name="whenHitPointsDamagedChangesInto" value="2:false:Warrior-2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Warrior-3"/>
+        <option name="movement" value="2"/>
+			<option name="canBlitz" value="true"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+		<option name="requiresUnits" value="spawn-point"/>
+    </attachment>
+<!-- Warrior wounded -->
+    <attachment name="unitAttachment" attachTo="Warrior-3" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="3"/>
+        <option name="defense" value="3"/>
+		<option name="hitPoints" value="3"/>
+			<option name="whenHitPointsDamagedChangesInto" value="2:false:Warrior-1"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Warrior-2"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+   <attachment name="unitAttachment" attachTo="Warrior-2" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="2"/>
+        <option name="defense" value="2"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Warrior-1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+   <attachment name="unitAttachment" attachTo="Warrior-1" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="attack" value="1"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+			<option name="transportCost" value="1"/>
+			<option name="isAirTransportable" value="true"/>
+    </attachment>
+
+
+
+<!-- Wizard  -->
+    <attachment name="unitAttachment" attachTo="Wizard" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="1"/>
+		<option name="isFirstStrike" value="true"/>	<!-- magic -->
+		<option name="attack" value="3"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="2"/>
+			<option name="whenHitPointsDamagedChangesInto" value="1:false:Wizard-1"/>
+        <option name="movement" value="3"/>			<!-- limited teleport -->
+			<option name="canBlitz" value="true"/>
+		<option name="givesMovement" value="1:$Heroes$:Elemental"/>	<!-- magic -->
+		<option name="requiresUnits" value="spawn-point"/>
+    </attachment>
+<!-- Wizard wounded loses isFirstStrike & givesMovement, keeps move 4 -->
+    <attachment name="unitAttachment" attachTo="Wizard-1" javaClass="UnitAttachment" type="unitType">
+		<option name="isFirstStrike" value="true"/>	<!-- magic -->
+		<option name="attack" value="2"/>
+        <option name="defense" value="0"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="3"/>			<!-- limited teleport -->
+			<option name="canBlitz" value="true"/>
+    </attachment>
+
+
+
+<!-- Elemental -->
+    <attachment name="unitAttachment" attachTo="Elemental" javaClass="UnitAttachment" type="unitType">
+      <option name="maxBuiltPerPlayer" value="2"/>
+		<option name="attack" value="1"/>
+        <option name="defense" value="1"/>
+		<option name="hitPoints" value="1"/>
+        <option name="movement" value="1"/>
+		<option name="isConstruction" value="true"/>         			<!-- place 1 anywhere owned -->
+			<option name="constructionType" value="Summoned"/>
+			<option name="maxConstructionsPerTypePerTerr" value="99"/>
+			<option name="constructionsPerTerrPerTypePerTurn" value="1"/>
+			<option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
+		<option name="createsResourcesList" value="-1:SummonerMana"/>
+    </attachment>
+
+
+<!-- Spawn-Point -->
+    <attachment name="unitAttachment" attachTo="spawn-point" javaClass="UnitAttachment" type="unitType">
+		<option name="isFactory" value="true"/>
+		<option name="canProduceXUnits" value="1"/>
+    </attachment>
+
+<!-- na-1 -->
+    <attachment name="unitAttachment" attachTo="na-1" javaClass="UnitAttachment" type="unitType">
+    </attachment>
+<!-- na-2 -->
+    <attachment name="unitAttachment" attachTo="na-2" javaClass="UnitAttachment" type="unitType">
+    </attachment>
+
+
+<!-- ======================================= GO Infrastructure ======================================= -->
+<!-- Healing Well -->
+    <attachment name="unitAttachment" attachTo="Healing-Well" javaClass="UnitAttachment" type="unitType">
+        <option name="isInfrastructure" value="true"/>
+	</attachment>
+
+
+<!-- ======================================= GO UNIT SUPPORT ATTACHMENTS =======================================  -->	
+
+
+
+<!-- ======================================= GO TRIGGER =======================================  -->
+<!-- ======================================= GO ARCHER-SHOT =======================================  -->
+
+<!-- Start Every turn condition -->
+	<attachment foreach="$AllPlayers$" name="cA_EveryTurn" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="rounds" value="1-+"/>
+	</attachment>
+
+<!-- At Battle remove all unused Catapult-Shot before non-combat move -->
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Unused_Archer-Shot_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+		<option name="conditions" value="cA_EveryTurn"/>
+		<option name="when" value="after:@AllPlayersLC@Battle"/>
+		<option name="removeUnits" value="all:Archer-Shot" count="9"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Unused_Archer-Shot-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+		<option name="conditions" value="cA_EveryTurn"/>
+		<option name="when" value="after:@AllPlayersLC@Battle"/>
+		<option name="removeUnits" value="all:Archer-Shot-1" count="9"/>
+	</attachment>
+
+
+<!-- ======================================= GO HEALING-PRIEST =======================================  -->
+
+	<attachment foreach="$AllPlayers$^$AllTerr$" name="cA_Priest_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Priest" count="1"/>
+	</attachment>
+
+
+<!-- Warrior-3 to Warrior -->
+	<attachment foreach="$AllPlayers$^$AllTerr$" name="cA_Warrior-3_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Warrior-3" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Warrior-3_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Warrior-3_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Warrior" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Warrior-3" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Warrior-2 to Warrior-3 -->
+	<attachment foreach="$AllPlayers$^$AllTerr$" name="cA_Warrior-2_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Warrior-2" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Warrior-2_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Warrior-2_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Warrior-3" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Warrior-2" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Warrior-1 to Warrior-2 -->
+	<attachment foreach="$AllPlayers$^$AllTerr$" name="cA_Warrior-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Warrior-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Warrior-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Warrior-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Warrior-2" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Warrior-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+
+<!-- Barbarian-2 to Barbarian -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Barbarian-2_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Barbarian-2" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Barbarian-2_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Barbarian-2_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Barbarian" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Barbarian-2" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Barbarian-1 to Barbarian-2 -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Barbarian-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Barbarian-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Barbarian-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Barbarian-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Barbarian-2" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Barbarian-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+
+<!-- Rogue-2 to Rogue -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Rogue-2_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Rogue-2" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Rogue-2_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Rogue-2_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Rogue" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Rogue-2" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Rogue-1 to Rogue-2 -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Rogue-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Rogue-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Rogue-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Rogue-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Rogue-2" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Rogue-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Priest this only works with a Priest healing a Priest-1 which will probably never happen -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Priest-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Priest-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Priest-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Priest-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Priest" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Priest-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Summoner -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Summoner-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Summoner-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Summoner-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Summoner-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Summoner" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Summoner-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Wizard -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Wizard-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Wizard-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Wizard-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest_@AllPlayers@_@AllTerr@:cA_Wizard-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Wizard" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Wizard-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-3"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+<!-- ======================================= HEALING-PRIEST END =======================================  -->
+
+
+
+<!-- ======================================= GO HEALING-PRIEST-1 =======================================  -->
+<!-- self heal Priest-1 to Priest and following turns can heal others -->
+	<attachment foreach="$AllTerr$^$AllPlayers$" name="cA_Priest-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="@AllTerr@" count="1"/>
+		<option name="unitPresence" value="Priest-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllTerr$^$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Priest_Priest-1_@AllPlayers@_@AllTerr@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Priest-1_@AllPlayers@_@AllTerr@"/>
+			<option name="placement" value="@AllTerr@:Priest" count="1"/>
+			<option name="removeUnits" value="@AllTerr@:Priest-1" count="1"/>
+			<option name="resource" value="PriestMana"/>
+			<option name="resourceCount" value="-2"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+
+
+<!-- ======================================= GO HEALING-WELL =======================================  -->
+
+	<attachment foreach="$AllPlayers$" name="cA_Healing-Well_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Healing-Well" count="1"/>
+	</attachment>
+
+<!-- ======================================= GO HEALING-WELL =======================================  -->
+
+<!-- Warrior-3 to Warrior -->
+	<attachment foreach="$AllPlayers$" name="cA_Warrior-3_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Warrior-3" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Warrior-3_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Warrior-3_@AllPlayers@"/>
+			<option name="placement" value="E6:Warrior" count="1"/>
+			<option name="removeUnits" value="E6:Warrior-3" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Warrior-2 to Warrior-3 -->
+	<attachment foreach="$AllPlayers$" name="cA_Warrior-2_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Warrior-2" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Warrior-2_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Warrior-2_@AllPlayers@"/>
+			<option name="placement" value="E6:Warrior-3" count="1"/>
+			<option name="removeUnits" value="E6:Warrior-2" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Warrior-1 to Warrior-2 -->
+	<attachment foreach="$AllPlayers$" name="cA_Warrior-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Warrior-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Warrior-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Warrior-1_@AllPlayers@"/>
+			<option name="placement" value="E6:Warrior-2" count="1"/>
+			<option name="removeUnits" value="E6:Warrior-1" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+
+<!-- Barbarian-2 to Barbarian -->
+	<attachment foreach="$AllPlayers$" name="cA_Barbarian-2_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Barbarian-2" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Barbarian-2_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Barbarian-2_@AllPlayers@"/>
+			<option name="placement" value="E6:Barbarian" count="1"/>
+			<option name="removeUnits" value="E6:Barbarian-2" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Barbarian-1 to Barbarian-2 -->
+	<attachment foreach="$AllPlayers$" name="cA_Barbarian-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Barbarian-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Barbarian-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Barbarian-1_@AllPlayers@"/>
+			<option name="placement" value="E6:Barbarian-2" count="1"/>
+			<option name="removeUnits" value="E6:Barbarian-1" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+
+<!-- Rogue-2 to Rogue -->
+	<attachment foreach="$AllPlayers$" name="cA_Rogue-2_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Rogue-2" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Rogue-2_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Rogue-2_@AllPlayers@"/>
+			<option name="placement" value="E6:Rogue" count="1"/>
+			<option name="removeUnits" value="E6:Rogue-2" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Rogue-1 to Rogue-2 -->
+	<attachment foreach="$AllPlayers$" name="cA_Rogue-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Rogue-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Rogue-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Rogue-1_@AllPlayers@"/>
+			<option name="placement" value="E6:Rogue-2" count="1"/>
+			<option name="removeUnits" value="E6:Rogue-1" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Priest -->
+	<attachment foreach="$AllPlayers$" name="cA_Priest-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Priest-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Priest-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Priest-1_@AllPlayers@"/>
+			<option name="placement" value="E6:Priest" count="1"/>
+			<option name="removeUnits" value="E6:Priest-1" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Summoner -->
+	<attachment foreach="$AllPlayers$" name="cA_Summoner-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Summoner-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Summoner-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Summoner-1_@AllPlayers@"/>
+			<option name="placement" value="E6:Summoner" count="1"/>
+			<option name="removeUnits" value="E6:Summoner-1" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+
+<!-- Wizard -->
+	<attachment foreach="$AllPlayers$" name="cA_Wizard-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="directPresenceTerritories" value="E6" count="1"/>
+		<option name="unitPresence" value="Wizard-1" count="1"/>
+	</attachment>
+	<attachment foreach="$AllPlayers$:$AllPlayersLC$" name="triggerAttachment_Healing-Well_Wizard-1_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+        <option name="conditions" value="cA_Healing-Well_@AllPlayers@:cA_Wizard-1_@AllPlayers@"/>
+			<option name="placement" value="E6:Wizard" count="1"/>
+			<option name="removeUnits" value="E6:Wizard-1" count="1"/>
+		<option name="when" value="before:@AllPlayersLC@Purchase"/>
+		<option name="players" value="@AllPlayers@"/>
+	</attachment>
+<!-- ======================================= GO HEALING-WELL END =======================================  -->
+
+
+
+
+
+<!-- ======================================= GO VICTORY ======================================= -->
+<!-- Trigger Victory  -->
+<!-- by killing all 5 heroes = 100TUV  -->
+<!-- see notifications.properties file -->
+
+<!-- Victory Test -->
+	<attachment foreach="$AllPlayers$" name="cA_TUV_@AllPlayers@" attachTo="@AllPlayers@" javaClass="RulesAttachment" type="player">
+		<option name="destroyedTUV" value="allRounds" count="100"/>
+	</attachment>
+    <attachment foreach="$AllPlayers$" name="triggerAttachment_TUV_@AllPlayers@" attachTo="@AllPlayers@" javaClass="TriggerAttachment" type="player">
+		<option name="trigger" value="cA_TUV_@AllPlayers@"/>
+		<option name="victory" value="Victory_@AllPlayers@"/>
+		<option name="players" value="@AllPlayers@"/>
+    </attachment>
+
+
+
+<!-- ======================================= GO RETAIN pu income for loss of capital ======================================= -->
+<!-- retainCapitalNumber means that we do not lose our money if we still control at least this many of our capitals (defaults to 1).
+	If a player has no playerAttachment, then it defaults to X, where X = total number of capitals
+	(ie: you lose your money if a single capital is captured)
+	retainCapitalProduceNumber is similar to above, but only affect gaining income and producing units (probably should be less 
+	than or equal to retainCapitalNumber)
+	If a player has no playerAttachment, then it defaults to 1 (ie: you keep collecting and producing units so long as you control at least 1 capital)
+-->
+
+<!-- GO Stack Unit - stacking limit of 2 heroes per hex -->
+    <attachment foreach="$AllPlayers$" name="playerAttachment" attachTo="@AllPlayers@" javaClass="PlayerAttachment" type="player">
+		<option name="retainCapitalNumber" value="0"/>
+		<option name="retainCapitalProduceNumber" value="0"/>
+
+		<option name="movementLimit"  value="allied:$Heroes$:Elemental:$AllStructures$" count="2"/>
+		<option name="attackingLimit" value="allied:$Heroes$:Elemental:$AllStructures$" count="2"/>
+		<option name="placementLimit" value="allied:$Heroes$:Elemental:$AllStructures$" count="2"/>
+
+		<option name="movementLimit"  value="total:$Heroes$:Elemental:$AllStructures$" count="4"/>
+		<option name="attackingLimit" value="total:$Heroes$:Elemental:$AllStructures$" count="4"/>
+		<option name="placementLimit" value="total:$Heroes$:Elemental:$AllStructures$" count="4"/>
+    </attachment>
+
+
+</attachmentList>
+
+
+
+<!-- ======================================= GO INITIALIZE =======================================  -->	
+<initialize>
+    <ownerInitialize>
+		<territoryOwner territory="A1" owner="Blue"/>
+		<territoryOwner territory="B1" owner="Blue"/>
+		<territoryOwner territory="A2" owner="Blue"/>
+		<territoryOwner territory="B2" owner="Blue"/>
+
+		<territoryOwner territory="I10" owner="Darkred"/>
+		<territoryOwner territory="H10" owner="Darkred"/>
+		<territoryOwner territory="I9" owner="Darkred"/>
+		<territoryOwner territory="J10" owner="Darkred"/>
+	</ownerInitialize>
+
+
+<!-- ======================================= GO UNIT INITIALIZE =======================================  -->	
+<unitInitialize>
+<!-- Unit Placements -->
+	<unitPlacement unitType="spawn-point" territory="A1" quantity="1" owner="Blue"/>
+	<unitPlacement unitType="spawn-point" territory="B1" quantity="1" owner="Blue"/>
+	<unitPlacement unitType="spawn-point" territory="A2" quantity="1" owner="Blue"/>
+	<unitPlacement unitType="spawn-point" territory="B2" quantity="1" owner="Blue"/>
+<!--
+	<unitPlacement unitType="Warrior" territory="B2" quantity="1" owner="Blue"/>
+	<unitPlacement unitType="Rogue" territory="B2" quantity="1" owner="Blue"/>
+	<unitPlacement unitType="Archer" territory="A1" quantity="1" owner="Blue"/>
+	<unitPlacement unitType="Wizard" territory="A1" quantity="1" owner="Blue"/>
+-->
+	<unitPlacement unitType="spawn-point" territory="I10" quantity="1" owner="Darkred"/>
+	<unitPlacement unitType="spawn-point" territory="H10" quantity="1" owner="Darkred"/>
+	<unitPlacement unitType="spawn-point" territory="I9" quantity="1" owner="Darkred"/>
+	<unitPlacement unitType="spawn-point" territory="J10" quantity="1" owner="Darkred"/>
+<!--
+	<unitPlacement unitType="Warrior" territory="H10" quantity="1" owner="Darkred"/>
+	<unitPlacement unitType="Rogue" territory="H10" quantity="1" owner="Darkred"/>
+	<unitPlacement unitType="Barbarian" territory="I9" quantity="1" owner="Darkred"/>
+	<unitPlacement unitType="Wizard" territory="I9" quantity="1" owner="Darkred"/>
+-->
+	<unitPlacement unitType="Healing-Well" territory="E6" quantity="1"/>
+
+</unitInitialize>
+
+
+
+	<resourceInitialize>
+		<resourceGiven player="Blue" resource="PUs" quantity="80"/>
+		<resourceGiven player="Darkred" resource="PUs" quantity="80"/>
+	</resourceInitialize>
+</initialize>
+
+
+
+<!-- ======================================= GO PropertyList ======================================= -->
+<propertyList>
+
+<!-- ======================================= GO VICTORY =======================================  -->	
+<!-- Triggered Victory is a victory condition set by a trigger, using a condition or national objective -->
+<!-- by killing all 5 heroes @ 20pu = 100TUV -->
+    <property name="Triggered Victory" value="true" editable="true">
+      <boolean/>
+    </property>
+
+<!-- by having 5vc out of 5vc  -->
+    <property name="Projection of Power" value="true" editable="true">
+		<boolean/>	
+	</property>
+	<property name="Blue Projection of Power VCs"    value="5" editable="true">	<number min="3" max="5"/>	</property>
+	<property name="Darkred Projection of Power VCs" value="5" editable="true">	<number min="3" max="5"/>	</property>
+
+
+<!-- ======================================= BATTLE ROUNDS  =======================================  -->	
+
+    <property name="Land Battle Rounds" value="1" editable="false">
+    </property>
+    <property name="Sea Battle Rounds" value="1" editable="false">
+    </property>
+    <property name="Air Battle Rounds" value="1" editable="false">
+    </property>
+
+<!-- ======================================= GAME RELATED =======================================  -->	
+
+    <property name="National Objectives" value="true" editable="true">
+      <boolean/>
+    </property>
+
+<!-- If any players are disabled and unused, then all their units, money, etc, gets deleted at the start of the game during initialization delegate. -->
+    <property name="Disabled Players Assets Deleted" value="true" editable="false">
+      <boolean/>
+    </property>
+
+    <property name="Units May Give Bonus Movement" value="true" editable="false">
+		<boolean/>
+	</property>
+
+    <property name="Use Triggers" value="true" editable="false">
+		<boolean/>
+    </property>
+
+<!--    <property name="Units Repair Hits Start Turn" value="false" editable="true">  -->
+<!--
+    <property name="Units Repair Hits End Turn" value="true" editable="false">
+      <boolean/>
+    </property>
+-->
+    <!-- in order to repair, a unit must in the presence of a unit with "repairsUnits" unit attachment -->
+<!--
+    <property name="Two HitPoint Units Require Repair Facilities" value="true" editable="false">
+      <boolean/>
+    </property>
+-->
+
+<!-- =======================================  LAND RELATED ======================================= -->
+<!-- if true, units with destroyedWhenCapturedBy will be destroyed instead of captured. only applies to non-combat units, since combat units die in combat -->
+    <property name="Units Can Be Destroyed Instead Of Captured" value="true" editable="false">
+        <boolean/>
+    </property>
+
+<!-- allows units to change into other units using the "whenCaptumoriChangesInto" ability -->
+<!-- used by  -->
+    <property name="Units Can Be Changed On Capture" value="true" editable="false">
+        <boolean/>
+    </property>
+
+
+<!-- =======================================  AIR RELATED ======================================= -->
+
+
+<!-- =======================================  SEA RELATED ======================================= -->
+
+
+<!-- =======================================  PRODUCTION RELATED ======================================= -->
+
+<!-- Go Stacking -->
+    <property name="Unit Placement Per Territory Restricted" value="true" editable="false">
+      <boolean/>
+    </property>
+
+<!--
+    <property name="Place in Any Territory" value="true" editable="false">
+      <boolean/>
+    </property>
+-->
+    <property name="Unplaced units live when not placed" value="true" editable="false">
+        <boolean/>
+    </property>
+
+    <!-- Any territory abandoned may be taken over by the remaining units on the same turn it was abandoned on. 
+	Also includes if a territory is attacked and both all the attackers and all defenders die, 
+	then any other player with combat units will take over the territory. -->
+    <property name="Abandoned Territories May Be Taken Over Immediately" value="true" editable="false">
+      <boolean/>
+    </property>
+
+
+<!-- =======================================  NEUTRALS RELATED ======================================= -->
+
+    <property name="Neutrals Are Impassable" value="false" editable="false">
+        <boolean/>
+    </property>
+    <property name="Neutrals Are Blitzable" value="true" editable="false">
+        <boolean/>
+    </property>
+    <property name="Neutral Flyover Allowed" value="true" editable="false">
+        <boolean/>
+    </property>
+
+    <!-- Map Name: also used for map utils when asked -->
+    <property name="mapName" value="arena_of_death" editable="false"/>
+
+<!-- notes appear in the notes menu in the main screen, format as html -->
+<!-- ======================================= NOTES =======================================  -->	
+        <property name="notes">
+            <value>
+            <![CDATA[
+            <html>
+			<body bgcolor="AAAAAA" align="left">
+				<div style="padding:10px;"text-align:justify;">
+				<br> For the latest download and discussion, copy and paste the link below
+				<br>
+				<br>https://forums.triplea-game.org/topic/3264/arena-of-death-official-thread
+				<br>
+				<br><center><img src="Game_Notes.png"/></center>
+			</html>
+            ]]>
+			</value>
+        </property>
+</propertyList>
+</game>
